@@ -1,0 +1,638 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #563b40;
+  background: #fffaf5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 8%;
+  background: #fffaf5;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #bd7189;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #bd7189;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 75px 10%;
+  background: #f9e6e8;
+}
+
+.hero-texto {
+  max-width: 540px;
+}
+
+.etiqueta {
+  color: #b76580;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  margin: 18px 0;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.12;
+}
+
+.hero-texto > p:not(.etiqueta) {
+  line-height: 1.8;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 22px;
+  border-radius: 30px;
+  background: #bd7189;
+  color: white;
+  font-weight: 600;
+}
+
+.boton:hover {
+  background: #9f536d;
+}
+
+.hero-decoracion {
+  font-size: clamp(100px, 20vw, 220px);
+}
+
+.productos {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.productos h2,
+.nosotros h2,
+.contacto h2 {
+  font-size: 36px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.tarjeta {
+  padding: 25px;
+  border: 1px solid #f0dfe0;
+  border-radius: 18px;
+  background: white;
+}
+
+.producto-imagen {
+  display: grid;
+  min-height: 140px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff0ee;
+  font-size: 75px;
+}
+
+.tarjeta h3 {
+  font-size: 22px;
+}
+
+.tarjeta p {
+  min-height: 48px;
+  color: #79666a;
+  line-height: 1.6;
+}
+
+.tarjeta span {
+  color: #ad5e79;
+  font-weight: 700;
+}
+
+.nosotros,
+.contacto {
+  padding: 65px 10%;
+  text-align: center;
+}
+
+.nosotros {
+  background: #f9e6e8;
+}
+
+.nosotros p,
+.contacto p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+footer {
+  padding: 22px;
+  background: #563b40;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+@media (max-width: 700px) {
+  .encabezado {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px 7%;
+    background: #f9e6e8;
+    text-align: center;
+  }
+
+  .hero-texto {
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .hero-texto h1 {
+    font-size: 38px;
+  }
+
+  .hero-decoracion {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    font-size: 100px;
+  }
+
+  .hero-decoracion img {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .productos h2,
+  .nosotros h2,
+  .contacto h2 {
+    font-size: 29px;
+  }
+
+  .productos {
+    padding: 45px 7%;
+  }
+
+  .nosotros,
+  .contacto {
+    padding: 45px 7%;
+  }
+}
+    @media (max-width: 700px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 7%;
+    background: #f9e6e8;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .productos h2,
+    .nosotros h2,
+    .contacto h2 {
+        font-size: 29px;
+    }
+        .hero-decoracion {
+        width: 100%;
+        max-width: 340px;
+        margin: 20px auto 0;
+    }
+
+    .hero-decoracion img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+    }
+
+.buscador {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 25px auto;
+  padding: 14px 18px;
+  border: 1px solid #e8c9d0;
+  border-radius: 25px;
+  background: #fff;
+  color: #563b40;
+  font: inherit;
+  outline: none;
+}
+
+.buscador:focus {
+  border-color: #bd7189;
+  box-shadow: 0 0 0 3px #f9e6e8;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tarjeta .boton {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.detalle {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.detalle-imagen {
+  display: grid;
+  min-height: 220px;
+  margin-bottom: 28px;
+  place-items: center;
+  border-radius: 20px;
+  background: #f9e6e8;
+  font-size: 110px;
+}
+
+.detalle h2 {
+  font-size: 36px;
+}
+
+.detalle-precio {
+  color: #ad5e79;
+  font-size: 24px;
+  font-weight: 700;
+}
+.producto-imagen {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-decoracion {
+  flex: 0 1 380px;
+  min-width: 0;
+}
+
+.hero-decoracion img {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* Fondo de la ventana flotante */
+.modal-fondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Ventana rosa y blanca */
+.modal-contenido {
+  background: #fff8fa;
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de tamaño adecuado */
+.modal-imagen {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Botón de cerrar */
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #a64d70;
+}
+
+/* Precio */
+.modal-precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: #a64d70;
+}
+/* PÁGINA DE CONTACTO */
+
+.contacto-pagina {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 25px 90px;
+  text-align: center;
+}
+
+.contacto-pagina h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  color: #5b3a42;
+  margin: 20px 0;
+}
+
+.contacto-pagina > p {
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* FORMULARIO */
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(91, 58, 66, 0.1);
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.formulario-contacto label {
+  font-weight: 600;
+  color: #5b3a42;
+  margin-top: 8px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #e8c9d3;
+  border-radius: 12px;
+  background: #fffafc;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: 2px solid #c47a96;
+}
+
+.formulario-contacto button {
+  margin-top: 15px;
+  align-self: center;
+}
+
+.contacto-pagina > .boton {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
+.historia-pagina {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 60px 25px 90px;
+  color: #5b3a42;
+}
+
+/* PRESENTACIÓN */
+
+.historia-intro {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.historia-intro .etiqueta {
+  color: #bb7893;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.historia-pagina .historia-intro h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.2;
+  color: #713e54;
+  margin: 20px auto;
+  max-width: 750px;
+}
+
+.historia-intro > p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #7c636b;
+}
+
+/* FOTOGRAFÍA DE LAS HERMANAS */
+
+.historia-foto {
+  text-align: center;
+  background: #fff7f9;
+  padding: 30px;
+  border-radius: 25px;
+  margin-bottom: 45px;
+  box-shadow: 0 8px 28px rgba(120, 65, 85, 0.08);
+}
+
+.historia-foto img {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(91, 58, 66, 0.15);
+}
+
+.historia-foto p {
+  margin-top: 18px;
+  color: #a66b83;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* SECCIONES DE LA HISTORIA */
+
+.historia-seccion {
+  background: #ffffff;
+  padding: 38px 45px;
+  border-radius: 22px;
+  margin-bottom: 28px;
+  border-left: 5px solid #e6a9bf;
+  box-shadow: 0 6px 25px rgba(120, 65, 85, 0.07);
+}
+
+.historia-pagina .historia-seccion h2 {
+  font-size: clamp(24px, 3vw, 30px);
+  color: #ad6582;
+  margin: 0 0 20px;
+  line-height: 1.3;
+}
+
+.historia-seccion p {
+  font-size: 16px;
+  line-height: 1.95;
+  color: #654e57;
+  margin-bottom: 18px;
+}
+
+.historia-seccion p:last-child {
+  margin-bottom: 0;
+}
+
+/* FINAL EMOTIVO */
+
+.historia-final {
+  text-align: center;
+  background: #fbe4ec;
+  padding: 45px 35px;
+  border-radius: 25px;
+  margin-top: 45px;
+}
+
+.historia-pagina .historia-final h2 {
+  font-size: clamp(25px, 3.5vw, 34px);
+  color: #914c6a;
+  margin: 0 0 20px;
+  line-height: 1.3;
+}
+
+.historia-final p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.9;
+  font-size: 17px;
+  color: #6d4d5b;
+}
+
+.historia-final .boton {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ADAPTACIÓN PARA MÓVILES */
+
+@media (max-width: 600px) {
+  .historia-pagina {
+    padding: 35px 15px 60px;
+  }
+
+  .historia-foto {
+    padding: 18px;
+  }
+
+  .historia-seccion {
+    padding: 25px 22px;
+  }
+
+  .historia-final {
+    padding: 30px 20px;
+  }
+
+  .historia-seccion p,
+  .historia-final p {
+    font-size: 15px;
+  }
+}
