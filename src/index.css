@@ -636,3 +636,98 @@ footer {
     font-size: 15px;
   }
 }
+
+/* TARTAS TEMÁTICAS */
+
+.tematicos-pagina {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 90px;
+  text-align: center;
+}
+
+/* Presentación */
+.tematicos-intro {
+  margin-bottom: 40px;
+}
+
+.tematicos-intro h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  color: #914c6a;
+  margin: 20px 0;
+}
+
+.tematicos-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #6d4d5b;
+}
+
+/* Galería de fotografías */
+.tematicos-galeria {
+  max-width: 680px;
+  margin: 0 auto 50px;
+  background: #fff7fa;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(120, 65, 85, 0.12);
+}
+
+.tematicos-imagen {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.tematicos-contador {
+  margin-top: 15px;
+  color: #a66b83;
+  font-weight: 600;
+}
+
+/* Información y encargos */
+.tematicos-info {
+  background: #fbe4ec;
+  padding: 40px 30px;
+  border-radius: 25px;
+}
+
+.tematicos-info h2 {
+  font-size: 30px;
+  color: #914c6a;
+  margin-bottom: 20px;
+}
+
+.tematicos-info p {
+  max-width: 650px;
+  margin: 0 auto 18px;
+  line-height: 1.8;
+  color: #6d4d5b;
+}
+
+.tematicos-info .boton {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  .tematicos-pagina {
+    padding: 35px 15px 60px;
+  }
+
+  .tematicos-imagen {
+    height: 300px;
+  }
+
+  .tematicos-info {
+    padding: 30px 20px;
+  }
+
+  .tematicos-info h2 {
+    font-size: 25px;
+  }
+}

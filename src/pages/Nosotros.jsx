@@ -27,7 +27,7 @@ function Nosotros() {
             borderRadius: '20px'
           }}
         />
-        <p>Dina y Jimena, las hermanas detrás de Baúl Dulce 💗</p>
+        <p>Dina y Jimena, las hermanas detrás de Baúl Dulce </p>
       </div>
 
       <div className="historia-seccion">

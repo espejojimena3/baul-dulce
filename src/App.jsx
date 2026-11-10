@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import Contacto from './pages/Contacto.jsx'
 import Nosotros from './pages/Nosotros.jsx'
+import Tematicos from './pages/Tematicos.jsx'
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
           <Route path="/contacto" element={<Contacto />} />
 
           <Route path="/nosotros" element={<Nosotros />} />
+
+          <Route path="/tematicos" element={<Tematicos />} />
+          
         </Routes>
       </main>
 

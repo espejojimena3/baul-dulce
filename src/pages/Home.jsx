@@ -14,7 +14,9 @@ function Home() {
   useEffect(() => {
     async function cargarProductos() {
       try {
-        const respuesta = await fetch('http://localhost:3000/productos')
+       const respuesta = await fetch(
+        `${import.meta.env.VITE_API_URL || 'http://localhost:3000'}/productos`
+        )
 
         if (!respuesta.ok) {
           throw new Error('No se pudieron cargar los productos')
