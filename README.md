@@ -1,16 +1,45 @@
-# React + Vite
+# Baúl Dulce 🍰
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Sobre el proyecto
 
-Currently, two official plugins are available:
+Baúl Dulce es una pastelería que tenemos mi hermana Dina y yo. Empezamos durante la pandemia, vendiendo dulces a familiares y vecinos, y poco a poco fuimos creciendo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Para mi proyecto final decidí crear una página web para nuestro emprendimiento, donde los clientes puedan conocer nuestra historia, ver los productos y ponerse en contacto con nosotras.
 
-## React Compiler
+## ¿Qué tiene la página?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Inicio:** presentación de nuestra pastelería.
+- **Productos:** catálogo de dulces con fotografías, precios, buscador y una ventana con más detalles.
+- **Nosotros:** la historia de cómo empezamos Baúl Dulce.
+- **Contacto:** formulario conectado con Formspree para recibir mensajes.
 
-## Expanding the Oxlint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Para desarrollar la página he utilizado React, Vite, JavaScript y CSS.
+
+También he creado un backend con Node.js y Express, conectado a una base de datos que gestiono con XAMPP y phpMyAdmin.
+
+La API permite consultar, añadir, modificar y eliminar productos mediante las operaciones CRUD.
+
+## Cómo ejecutar el proyecto
+
+Primero hay que configurar la base de datos `baul_dulce` y crear el archivo `backend/.env` siguiendo el ejemplo de `.env.example`.
+
+**Backend:**
+
+```bash
+cd backend
+npm install
+node app.js
+```
+
+**Frontend:** desde la carpeta principal del proyecto:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+## Conclusión
+
+Con este proyecto he podido aplicar lo que he aprendido durante el curso a un negocio que forma parte de mi vida. Me ha gustado especialmente poder crear una web para nuestra propia pastelería y conectar los productos con una base de datos real.
