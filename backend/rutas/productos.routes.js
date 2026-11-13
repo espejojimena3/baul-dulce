@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const verificarAdmin = require('../middlewares/verificarAdmin');
 
 const {
   obtenerProductos,
@@ -9,19 +10,11 @@ const {
   eliminarProducto
 } = require('../controladores/productos.controller');
 
-// GET: listar productos
+
 router.get('/', obtenerProductos);
-
-// GET: buscar un producto
 router.get('/:id', obtenerProductoPorId);
-
-// POST: crear un producto
-router.post('/', crearProducto);
-
-// PUT: actualizar un producto
-router.put('/:id', actualizarProducto);
-
-// DELETE: eliminar un producto
-router.delete('/:id', eliminarProducto);
+router.post('/', verificarAdmin, crearProducto);
+router.put('/:id', verificarAdmin, actualizarProducto);
+router.delete('/:id', verificarAdmin, eliminarProducto);
 
 module.exports = router;

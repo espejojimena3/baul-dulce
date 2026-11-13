@@ -2,8 +2,9 @@
 const express = require('express');
 const cors = require('cors');
 const errorHandler = require('./middlewares/errorHandler');
-
 const productosRoutes = require('./rutas/productos.routes');
+const categoriasRoutes = require('./rutas/categorias.routes');
+const encargosRoutes = require('./rutas/encargos.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,6 +21,8 @@ app.get('/', (req, res) => {
 
 // Rutas de productos
 app.use('/productos', productosRoutes);
+app.use('/categorias', categoriasRoutes);
+app.use('/encargos', encargosRoutes);
 
 // Error 404
 app.use((req, res) => {

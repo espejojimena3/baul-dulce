@@ -1,5 +1,5 @@
 
-const db = require('../db');
+const db = require('../data/db');
 
 // Obtener todos los productos
 const obtenerProductos = async (req, res) => {
@@ -36,11 +36,22 @@ const crearProducto = async (req, res) => {
   try {
     const { nombre, descripcion, precio, imagen, categoria, stock } = req.body;
 
-    if (!nombre || precio === undefined || precio === null) {
-      return res.status(400).json({
-        error: 'El nombre y el precio son obligatorios'
-      });
-    }
+   if (
+  typeof nombre !== 'string' ||
+  nombre.trim() === '' ||
+  precio == null ||
+  precio === '' ||
+  !Number.isFinite(Number(precio)) ||
+  Number(precio) < 0 ||
+  stock == null ||
+  stock === '' ||
+  !Number.isInteger(Number(stock)) ||
+  Number(stock) < 0
+) {
+  return res.status(400).json({
+    error: 'Introduce un nombre, precio y stock válidos'
+  });
+}
 
     const [resultado] = await db.query(
       `INSERT INTO productos
@@ -63,6 +74,23 @@ const crearProducto = async (req, res) => {
 const actualizarProducto = async (req, res) => {
   try {
     const { nombre, descripcion, precio, imagen, categoria, stock } = req.body;
+
+    if (
+      typeof nombre !== 'string' ||
+      nombre.trim() === '' ||
+      precio == null ||
+      precio === '' ||
+      !Number.isFinite(Number(precio)) ||
+      Number(precio) < 0 ||
+      stock == null ||
+      stock === '' ||
+      !Number.isInteger(Number(stock)) ||
+      Number(stock) < 0
+    ) {
+      return res.status(400).json({
+        error: 'Introduce un nombre, precio y stock válidos'
+      });
+    }
 
     const [resultado] = await db.query(
       `UPDATE productos

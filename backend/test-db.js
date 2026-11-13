@@ -1,5 +1,5 @@
 
-const db = require('./db');
+ const db = require('./data/db');
 
 async function probarConexion() {
   try {
